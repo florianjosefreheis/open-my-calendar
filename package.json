@@ -11,7 +11,8 @@
   ],
   "activationEvents": [
     "onCommand:extension.addCalendar",
-    "onCommand:extension.showAllCalendars"
+    "onCommand:extension.showAllCalendars",
+    "onCommand:extension.openCalendar"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -23,6 +24,11 @@
       {
         "command": "extension.showAllCalendars",
         "title": "Show All Calendars",
+        "category": "Calendar"
+      },
+      {
+        "command": "extension.openCalendar",
+        "title": "Open Calendar",
         "category": "Calendar"
       }
     ]

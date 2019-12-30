@@ -15,6 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
   // The commandId parameter must match the command field in package.json
   context.subscriptions.push(vscode.commands.registerCommand('extension.addCalendar', addCalendar));
   context.subscriptions.push(vscode.commands.registerCommand('extension.showAllCalendars', showAllCalendars));
+  context.subscriptions.push(vscode.commands.registerCommand('extension.openCalendar', openCalendar));
 
   async function addCalendar() {
     const calendarName = await vscode.window.showInputBox({ placeHolder: "Add calendar name." });
@@ -47,6 +48,29 @@ export function activate(context: vscode.ExtensionContext) {
         });
     }
   }
+
+  async function openCalendar() {
+    vscode.window.showInputBox({
+      placeHolder:
+        "Enter calendar name."
+    }).then(async function (userInput) {
+      if (userInput) {
+        let calendarUrl = await findCalendar(context, userInput);
+        if (calendarUrl !== undefined) {
+          vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(calendarUrl));
+          vscode.window.showInformationMessage('Open Calendar ' + calendarUrl);
+        }
+        else {
+          vscode.window.showErrorMessage("Calendar \"" + userInput + "\" could not be found.");
+        }
+      }
+    });
+  }
+}
+
+async function findCalendar(context: vscode.ExtensionContext, userInput: any) {
+  let calendarUrl = context.globalState.get(userInput);
+  if (calendarUrl) { return calendarUrl; }
 }
 
 // this method is called when your extension is deactivated
