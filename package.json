@@ -10,15 +10,22 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.addCalendar"
+    "onCommand:extension.addCalendar",
+    "onCommand:extension.showAllCalendars"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [{
-      "command": "extension.addCalendar",
-      "title": "Add Calendar",
-      "category": "Calendar"
-    }]
+        "command": "extension.addCalendar",
+        "title": "Add Calendar",
+        "category": "Calendar"
+      },
+      {
+        "command": "extension.showAllCalendars",
+        "title": "Show All Calendars",
+        "category": "Calendar"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",

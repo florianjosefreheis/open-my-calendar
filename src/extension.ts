@@ -14,6 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
   // Now provide the implementation of the command with registerCommand
   // The commandId parameter must match the command field in package.json
   context.subscriptions.push(vscode.commands.registerCommand('extension.addCalendar', addCalendar));
+  context.subscriptions.push(vscode.commands.registerCommand('extension.showAllCalendars', showAllCalendars));
 
   async function addCalendar() {
     const calendarName = await vscode.window.showInputBox({ placeHolder: "Add calendar name." });
@@ -26,6 +27,18 @@ export function activate(context: vscode.ExtensionContext) {
       else {
         vscode.window.showErrorMessage("Entered URL not valid.");
       }
+    }
+  }
+
+  async function showAllCalendars() {
+    //@ts-ignore
+    if (!Object.keys(context.globalState._value)) { return vscode.window.showInformationMessage("No calendars added."); }
+
+    //@ts-ignore
+    for (let key in context.globalState._value) {
+      let value = context.globalState.get(key);
+      //@ts-ignore
+      vscode.window.showInformationMessage("Calender: " + key, value);
     }
   }
 }
