@@ -16,6 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(vscode.commands.registerCommand('extension.addCalendar', addCalendar));
   context.subscriptions.push(vscode.commands.registerCommand('extension.showAllCalendars', showAllCalendars));
   context.subscriptions.push(vscode.commands.registerCommand('extension.openCalendar', openCalendar));
+  context.subscriptions.push(vscode.commands.registerCommand('extension.deleteCalendar', deleteCalendar));
 
   async function addCalendar() {
     const calendarName = await vscode.window.showInputBox({ placeHolder: "Add calendar name." });
@@ -59,6 +60,24 @@ export function activate(context: vscode.ExtensionContext) {
         if (calendarUrl !== undefined) {
           vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(calendarUrl));
           vscode.window.showInformationMessage('Open Calendar ' + calendarUrl);
+        }
+        else {
+          vscode.window.showErrorMessage("Calendar \"" + userInput + "\" could not be found.");
+        }
+      }
+    });
+  }
+
+  async function deleteCalendar() {
+    vscode.window.showInputBox({
+      placeHolder:
+        "Enter calendar name to delete."
+    }).then(async function (userInput) {
+      if (userInput) {
+        let calendar = await findCalendar(context, userInput);
+        if (calendar !== undefined) {
+          context.globalState.update(userInput, undefined);
+          vscode.window.showInformationMessage('Calendar \"' + userInput + '\" deleted.');
         }
         else {
           vscode.window.showErrorMessage("Calendar \"" + userInput + "\" could not be found.");
