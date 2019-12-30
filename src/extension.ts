@@ -38,7 +38,13 @@ export function activate(context: vscode.ExtensionContext) {
     for (let key in context.globalState._value) {
       let value = context.globalState.get(key);
       //@ts-ignore
-      vscode.window.showInformationMessage("Calender: " + key, value);
+      vscode.window.showInformationMessage("Calender: " + key, value)
+        .then((calendarUrl: string) => {
+          if (calendarUrl === value) {
+            vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(calendarUrl));
+          }
+          return;
+        });
     }
   }
 }
