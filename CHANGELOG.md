@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.0.1] - 2019-12-31
+
+- Add icon for marketplace
+- Update extension description
+
 ## [1.0.0] - 2019-12-31
 
 - Initial release

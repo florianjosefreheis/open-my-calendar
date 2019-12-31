@@ -2,7 +2,7 @@
   "name": "open-my-calendar",
   "displayName": "Open My Calendar",
   "description": "Simply load your pre-defined calenders from VSCode command palette.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "florianjosefreheis",
   "author": {
     "name": "Florian Josef Reheis"
