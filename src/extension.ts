@@ -58,6 +58,7 @@ export function activate(context: vscode.ExtensionContext) {
       if (userInput) {
         let calendarUrl = await findCalendar(context, userInput);
         if (calendarUrl !== undefined) {
+          //@ts-ignore
           vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(calendarUrl));
           vscode.window.showInformationMessage('Open Calendar ' + calendarUrl);
         }
