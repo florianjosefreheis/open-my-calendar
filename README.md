@@ -1,4 +1,4 @@
-# open-my-calendar README
+# README
 
 This is the README for your extension "open-my-calendar". This extention easaly allows you to open pre-defined calender urls via the VSCode command palette.
 
