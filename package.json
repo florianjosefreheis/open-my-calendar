@@ -3,8 +3,14 @@
   "displayName": "Open My Calendar",
   "description": "Simply load your predefined calenders from VSCode.",
   "version": "0.0.1",
+  "publisher": "florianjosefreheis",
+  "author": {
+    "name": "Florian Josef Reheis"
+  },
+  "license": "SEE LICENSE IN LICENSE.txt",
+
   "engines": {
-    "vscode": "^1.41.0"
+    "vscode": "^1.31.0"
   },
   "categories": [
     "Other"
