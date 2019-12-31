@@ -1,9 +1,14 @@
 # Change Log
 
-All notable changes to the "open-my-calendar" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
+## [1.0.0] - 2019-12-31
 
 - Initial release
+
+### Added
+
+- `Calendar: Add Calendar` - Add calendar name and url.
+- `Calendar: Show All Calendars` - Show all added calendars.
+- `Calendar: Open Calendar` - Open calendar.
+- `Calendar: Delete Calendar` - Delete calendar.
+
+## [Unreleased]
