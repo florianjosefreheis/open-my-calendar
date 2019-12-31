@@ -34,7 +34,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   async function showAllCalendars() {
     //@ts-ignore
-    if (!Object.keys(context.globalState._value)) { return vscode.window.showInformationMessage("No calendars added."); }
+    if (Object.keys(context.globalState._value).length === 0) { return vscode.window.showInformationMessage("No calendars added."); }
 
     //@ts-ignore
     for (let key in context.globalState._value) {
