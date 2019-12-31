@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.0.2] - 2019-12-31
+
+- Add multi step sample gif to README.md
+- Update extension description
+
 ## [1.0.1] - 2019-12-31
 
 - Add icon for marketplace

@@ -11,6 +11,8 @@ This extension is active by default when installed.
 * `Calendar: Open Calendar` - Open calendar.
 * `Calendar: Delete Calendar` - Delete calendar.
 
+![Multi-step sample](images/open-my-calendar.gif)
+
 ## Requirements
 
 `valid-url` need to be installed.
@@ -21,9 +23,7 @@ This extension is active by default when installed.
 
 ## Release Notes
 
-### 1.0.0
-
-Initial release of ```Open my Calendar```.
+[CHANGELOG](https://marketplace.visualstudio.com/items/florianjosefreheis.open-my-calendar/changelog)
 
 ## LICENSE
 
