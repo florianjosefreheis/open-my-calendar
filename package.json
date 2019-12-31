@@ -1,7 +1,7 @@
 {
   "name": "open-my-calendar",
   "displayName": "Open My Calendar",
-  "description": "Simply load your predefined calenders from VSCode.",
+  "description": "Simply load your pre-defined calenders from VSCode command palette.",
   "version": "1.0.0",
   "publisher": "florianjosefreheis",
   "author": {
@@ -14,6 +14,11 @@
   "categories": [
     "Other"
   ],
+  "icon": "images/open-my-calendar.png",
+  "galleryBanner": {
+    "color": "#000000",
+    "theme": "dark"
+  },
   "activationEvents": [
     "onCommand:extension.addCalendar",
     "onCommand:extension.showAllCalendars",
