@@ -2,7 +2,7 @@
   "name": "open-my-calendar",
   "displayName": "Open My Calendar",
   "description": "Simply load your pre-defined calendars from VSCode command palette.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "florianjosefreheis",
   "author": {
     "name": "Florian Josef Reheis"
@@ -53,6 +53,32 @@
     "type": "git",
     "url": "https://github.com/florianjosefreheis/open-my-calendar.git"
   },
+  "badges": [{
+      "description": "Latest Release",
+      "url": "https://vsmarketplacebadge.apphb.com/version-short/florianjosefreheis.open-my-calendar.svg",
+      "href": "https://marketplace.visualstudio.com/items?itemName=florianjosefreheis.open-my-calendar&ssr=false#overview"
+    },
+    {
+      "description": "Installs",
+      "url": "https://vsmarketplacebadge.apphb.com/installs/florianjosefreheis.open-my-calendar.svg",
+      "href": "https://marketplace.visualstudio.com/items?itemName=florianjosefreheis.open-my-calendar&ssr=false#overview"
+    },
+    {
+      "description": "Downloads",
+      "url": "https://vsmarketplacebadge.apphb.com/downloads/florianjosefreheis.open-my-calendar.svg",
+      "href": "https://marketplace.visualstudio.com/items?itemName=florianjosefreheis.open-my-calendar&ssr=false#overview"
+    },
+    {
+      "description": "Rating",
+      "url": "https://vsmarketplacebadge.apphb.com/rating-star/florianjosefreheis.open-my-calendar.svg",
+      "href": "https://marketplace.visualstudio.com/items?itemName=florianjosefreheis.open-my-calendar&ssr=false#review-details"
+    },
+    {
+      "description": "Github issues",
+      "url": "https://img.shields.io/github/issues/florianjosefreheis/open-my-calendar",
+      "href": "https://github.com/florianjosefreheis/open-my-calendar/issues"
+    }
+  ],
   "scripts": {
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",

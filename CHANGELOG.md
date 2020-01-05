@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.0.3] - 2020-01-05
+
+- Add badges to README.md and package.json
+
 ## [1.0.2] - 2019-12-31
 
 - Add multi step sample gif to README.md

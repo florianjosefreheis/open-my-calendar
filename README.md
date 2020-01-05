@@ -1,4 +1,10 @@
-# README
+# Open My Calendar
+
+[![Latest Release](https://vsmarketplacebadge.apphb.com/version-short/florianjosefreheis.open-my-calendar.svg)](https://marketplace.visualstudio.com/items?itemName=florianjosefreheis.open-my-calendar&ssr=false#overview)
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/florianjosefreheis.open-my-calendar.svg)](https://marketplace.visualstudio.com/items?itemName=florianjosefreheis.open-my-calendar&ssr=false#overview)
+[![Downloads](https://vsmarketplacebadge.apphb.com/downloads/florianjosefreheis.open-my-calendar.svg)](https://marketplace.visualstudio.com/items?itemName=florianjosefreheis.open-my-calendar&ssr=false#overview)
+[![Rating](https://vsmarketplacebadge.apphb.com/rating-star/florianjosefreheis.open-my-calendar.svg)](https://marketplace.visualstudio.com/items?itemName=florianjosefreheis.open-my-calendar&ssr=false#review-details)
+[![GitHub issues](https://img.shields.io/github/issues/florianjosefreheis/open-my-calendar)](https://github.com/florianjosefreheis/open-my-calendar/issues)
 
 This extention easily allows you to open pre-defined calender urls via the VSCode command palette.
 
